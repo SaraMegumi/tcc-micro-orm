@@ -68,26 +68,5 @@ coluna).
 > ser feitos contra PostgreSQL de verdade, como especificado na
 > metodologia (Capítulo 3).
 
-## Correspondência com o texto do TCC
 
-| Código | Seção do TCC |
-|---|---|
-| `Connection` (Singleton, `configure()`/`getInstance()`) | 4.2 |
-| `ActiveRecord` (Reflection API, convenção de nomes, RETURNING) | 4.1, 4.2 |
-| `QueryBuilder` (fluente, prepared statements) | 4.1 (d), 4.2, 4.3 |
-| `save()`, `find()`, `all()`, `delete()` | 4.3 |
-| `where()`, `orderBy()`, `limit()`, `get()` | 4.3 |
-| `examples/example.php` | 4.4 (exemplos de uso) |
 
-## Próximos passos sugeridos
-
-1. Rodar os testes de desempenho reais (Seção 5.3) contra PostgreSQL,
-   nos três volumes de dados definidos na Seção 5.1.1.
-2. Se quiser aumentar a cobertura de testabilidade (Seção 5.2, critério
-   "Testabilidade" — hoje marcado como "Baixa" para o micro ORM),
-   considerar extrair a lógica de montagem de SQL para métodos mais
-   isolados e testáveis sem precisar de banco de dados real.
-3. Opcionalmente, adicionar suporte básico a relacionamentos (1:N),
-   já que a tabela comparativa da Seção 5.2 marca "Suporte a
-   relacionamentos: Não" para o micro ORM — isso é só uma sugestão,
-   não uma exigência do escopo atual.
