@@ -1,0 +1,12 @@
+{
+    "name": "tcc/micro-orm-benchmark",
+    "description": "Benchmark do micro ORM contra Eloquent e Doctrine (TCC).",
+    "type": "project",
+    "require": {
+        "php": ">=8.3",
+        "illuminate/database": "^11.0",
+        "doctrine/orm": "^3.0",
+        "doctrine/dbal": "^4.0",
+        "symfony/cache": "^7.0"
+    }
+}

@@ -64,7 +64,7 @@ coluna).
 
 > **Importante:** esse teste com SQLite serve só para validar a lógica
 > da implementação rapidamente. Os testes de desempenho reais do TCC
-> (Seção 5.3), com os volumes de 1.000/10.000/100.000 registros, devem
+> (Seção 5.3), com os volumes de 100/1.000/10.000 registros, devem
 > ser feitos contra PostgreSQL de verdade, como especificado na
 > metodologia (Capítulo 3).
 
@@ -91,3 +91,7 @@ coluna).
    já que a tabela comparativa da Seção 5.2 marca "Suporte a
    relacionamentos: Não" para o micro ORM — isso é só uma sugestão,
    não uma exigência do escopo atual.
+
+Os testes de desempenho estão na pasta benchmark/ (veja benchmark/README.md para rodá-los).
+
+Os testes de desempenho estão na pasta benchmark/ (veja benchmark/README.md para rodá-los).
