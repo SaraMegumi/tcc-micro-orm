@@ -1,14 +1,13 @@
-# AsORM em PHP 8.3 — TCC
+# AsORM — Micro ORM em PHP 8.3
 
-Implementação do AsORM descrito no Capítulo 4 do TCC ("Implementação
-de um AsORM em PHP 8.3 com PostgreSQL"), seguindo o padrão **Active
-Record**, sem dependências externas.
+Implementação do AsORM, descrito no Capítulo 4 do TCC ("Implementação de um
+Micro ORM em PHP 8.3 com PostgreSQL"), seguindo o padrão **Active Record**,
+sem dependências externas.
 
 ## Estrutura do projeto
 
 ```
-micro-orm/
-├── composer.json          Metadados e autoload PSR-4 (App\ORM -> src/)
+├── composer.json           Metadados e autoload PSR-4 (App\ORM -> src/)
 ├── src/
 │   ├── Connection.php      Singleton de conexão PDO com PostgreSQL
 │   ├── ActiveRecord.php    Classe base do padrão Active Record
@@ -18,12 +17,17 @@ micro-orm/
 ├── sql/
 │   └── schema.sql          Script de criação das tabelas de exemplo
 ├── tests/
-│   └── manual_test.php     Teste funcional de ponta a ponta (usa SQLite)
+│   ├── manual_test.php     Teste funcional de ponta a ponta (SQLite)
+│   ├── test_postgres.php   Teste funcional com PostgreSQL
+│   └── casos_de_teste.md   Casos de teste e resultados
+├── benchmark/
+│   ├── benchmark.php       Testes de desempenho (PDO, AsORM, Eloquent, Doctrine)
+│   └── results/            Resultados (.csv e .md) dos modos padrão e transação única
 └── vendor/
     └── autoload.php        Autoloader simples (não requer Composer instalado)
 ```
 
-## Como rodar (com PostgreSQL de verdade)
+## Como rodar (com PostgreSQL)
 
 1. **Criar o banco e as tabelas:**
 
@@ -41,33 +45,33 @@ micro-orm/
    php examples/example.php
    ```
 
-Se preferir usar o Composer "de verdade" em vez do autoloader manual
-incluído em `vendor/autoload.php`, é só rodar `composer dump-autoload`
-na raiz do projeto — o `composer.json` já está configurado corretamente.
+Se preferir usar o Composer em vez do autoloader manual incluído em
+`vendor/autoload.php`, rode `composer dump-autoload` na raiz do projeto.
 
-## Como rodar os testes (sem precisar de PostgreSQL)
+## Como rodar os testes
 
-O arquivo `tests/manual_test.php` valida toda a lógica do ORM usando
-SQLite em memória (que também suporta a cláusula `RETURNING` a partir da
-versão 3.35), então dá pra rodar sem precisar configurar um servidor
-PostgreSQL:
+**Com SQLite (sem precisar de servidor PostgreSQL):** valida a lógica do
+AsORM usando SQLite em memória, que também suporta a cláusula `RETURNING`
+a partir da versão 3.35.
 
 ```bash
 php tests/manual_test.php
 ```
 
-Ele testa: convenção de nomes de tabela, INSERT com `RETURNING`, `find()`,
-cast automático de tipos na hidratação, `UPDATE` via `save()`, `all()`,
-o QueryBuilder completo (`where` + `orderBy` + `limit`), `delete()`, e as
-proteções contra SQL Injection (validação de operadores e de nomes de
-coluna).
+**Com PostgreSQL:** executa os testes contra o banco real (precisa do banco
+criado, como na seção anterior).
 
-> **Importante:** esse teste com SQLite serve só para validar a lógica
-> da implementação rapidamente. Os testes de desempenho reais do TCC
-> (Seção 5.3), com os volumes de 100/1.000/10.000 registros, devem
-> ser feitos contra PostgreSQL de verdade, como especificado na
-> metodologia (Capítulo 3).
+```bash
+php tests/test_postgres.php
+```
 
+Os testes cobrem: convenção de nomes de tabela, INSERT com `RETURNING`,
+`find()`, conversão automática de tipos na hidratação, `UPDATE` via `save()`,
+`all()`, o QueryBuilder completo (`where` + `orderBy` + `limit`), `delete()`
+e as proteções contra SQL Injection (validação de operadores e de nomes de
+coluna). A lista dos casos está em `tests/casos_de_teste.md`.
 
+## Testes de desempenho
 
-Os testes de desempenho estão na pasta benchmark/ (veja benchmark/README.md para rodá-los).
+Os testes de desempenho (Seção 5.3 do TCC) estão na pasta `benchmark/`;
+veja `benchmark/README.md` para rodá-los.
