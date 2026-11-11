@@ -1,5 +1,5 @@
 -- Esquema de exemplo utilizado nos testes e nas demonstrações do
--- micro ORM (Seção 4.4 e 5.1.1 do TCC).
+-- AsORM (Seção 4.4 e 5.1.1 do TCC).
 
 DROP TABLE IF EXISTS products;
 

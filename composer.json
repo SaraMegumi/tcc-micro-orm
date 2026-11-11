@@ -1,6 +1,6 @@
 {
     "name": "tcc/micro-orm",
-    "description": "Micro ORM em PHP 8.3 (padrao Active Record) com PostgreSQL, desenvolvido para o TCC.",
+    "description": "AsORM em PHP 8.3 (padrao Active Record) com PostgreSQL, desenvolvido para o TCC.",
     "type": "library",
     "license": "MIT",
     "require": {

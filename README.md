@@ -1,7 +1,7 @@
-# Micro ORM em PHP 8.3 — TCC
+# AsORM em PHP 8.3 — TCC
 
-Implementação do micro ORM descrito no Capítulo 4 do TCC ("Implementação
-de um Micro ORM em PHP 8.3 com PostgreSQL"), seguindo o padrão **Active
+Implementação do AsORM descrito no Capítulo 4 do TCC ("Implementação
+de um AsORM em PHP 8.3 com PostgreSQL"), seguindo o padrão **Active
 Record**, sem dependências externas.
 
 ## Estrutura do projeto

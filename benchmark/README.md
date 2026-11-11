@@ -1,4 +1,4 @@
-# Benchmark: micro ORM x Eloquent x Doctrine
+# Benchmark: AsORM x Eloquent x Doctrine
 
 Mede tempo (ms) e memória (MB) de 5 operações (inserção, leitura por ID,
 leitura de todos, atualização, remoção) em 3 volumes (100, 1.000 e 10.000
@@ -27,7 +27,7 @@ VOLUMES, REPS, TOOLS (ex.: `TOOLS=pdo,micro`), TX (0 ou 1).
 
 ## Os dois modos
 - **Padrão:** cada ferramenta é usada do jeito idiomático. O Doctrine agrupa
-  as escritas num único `flush()` (uma transação); PDO, micro ORM e Eloquent
+  as escritas num único `flush()` (uma transação); PDO, AsORM e Eloquent
   confirmam cada comando separadamente.
 - **TX=1:** todas as ferramentas gravam dentro de uma transação única por
   bloco. Isola o custo do próprio ORM, sem a vantagem do agrupamento.

@@ -1,4 +1,4 @@
-| Operação | N | PDO puro (ms) | Micro ORM (ms) | Eloquent (ms) | Doctrine (ms) |
+| Operação | N | PDO puro (ms) | AsORM (ms) | Eloquent (ms) | Doctrine (ms) |
 |---|---|---|---|---|---|
 | Inserção | 100 | 45.8 ± 21.3 | 83.6 ± 35.0 | 120.0 ± 38.6 | 30.0 ± 16.1 |
 | Inserção | 1000 | 676.0 ± 234.2 | 818.7 ± 361.7 | 1482.1 ± 120.5 | 162.2 ± 59.4 |

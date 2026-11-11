@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 /**
- * Benchmark de desempenho: micro ORM x Eloquent x Doctrine (+ PDO puro
+ * Benchmark de desempenho: AsORM x Eloquent x Doctrine (+ PDO puro
  * como linha de base). Metodologia: Capítulo 3 e Seção 5.3 do TCC.
  *
  * Para cada ferramenta, volume (N) e operação, executa REPS repetições
@@ -150,7 +150,7 @@ final class MicroAdapter extends Adapter
 {
     private array $entities = [];
 
-    public function name(): string { return 'Micro ORM'; }
+    public function name(): string { return 'AsORM'; }
     public function begin(): void { Connection::getInstance()->beginTransaction(); }
     public function commit(): void { Connection::getInstance()->commit(); }
 

@@ -5,7 +5,7 @@ declare(strict_types=1);
 /**
  * Teste manual de ponta a ponta. Usa SQLite em memória (que também
  * suporta a cláusula RETURNING a partir da versão 3.35) apenas para
- * validar a LÓGICA do micro ORM sem depender de um servidor PostgreSQL
+ * validar a LÓGICA do AsORM sem depender de um servidor PostgreSQL
  * disponível no ambiente de execução. A implementação final e os testes
  * de desempenho do TCC devem ser feitos contra PostgreSQL de verdade,
  * conforme especificado na Seção 3.3 e 5.1.1.

@@ -1,6 +1,6 @@
 {
     "name": "tcc/micro-orm-benchmark",
-    "description": "Benchmark do micro ORM contra Eloquent e Doctrine (TCC).",
+    "description": "Benchmark do AsORM contra Eloquent e Doctrine (TCC).",
     "type": "project",
     "require": {
         "php": ">=8.3",

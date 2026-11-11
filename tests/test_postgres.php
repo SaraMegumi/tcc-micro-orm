@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 /**
- * Casos de teste do micro ORM contra PostgreSQL real.
+ * Casos de teste do AsORM contra PostgreSQL real.
  *
  * Uso (na pasta do projeto, com o banco criado):
  *   php tests/test_postgres.php
