@@ -1,5 +1,5 @@
 -- Esquema de exemplo utilizado nos testes e nas demonstrações do
--- AsORM (Seção 4.4 e 5.1.1 do TCC).
+-- AsORM (Seção 4.4 e 3.8 do TCC).
 
 DROP TABLE IF EXISTS products;
 

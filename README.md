@@ -1,7 +1,7 @@
 # AsORM — Micro ORM em PHP 8.3
 
-Implementação do AsORM, descrito no Capítulo 4 do TCC ("Implementação de um
-Micro ORM em PHP 8.3 com PostgreSQL"), seguindo o padrão **Active Record**,
+Implementação do AsORM, descrito no Capítulo 4 do TCC ("AsORM: um micro ORM em PHP:
+implementação e análise comparativa com Eloquent e Doctrine"), seguindo o padrão **Active Record**,
 sem dependências externas.
 
 ## Estrutura do projeto
@@ -37,7 +37,8 @@ sem dependências externas.
    ```
 
 2. **Ajustar a conexão** em `examples/example.php` (host, porta, usuário,
-   senha) de acordo com o seu ambiente local.
+   senha) de acordo com o seu ambiente local. A senha do arquivo ('secret') é
+   apenas um exemplo; nunca coloque uma senha real no código versionado.
 
 3. **Rodar o exemplo:**
 

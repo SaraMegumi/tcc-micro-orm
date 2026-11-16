@@ -8,7 +8,7 @@ declare(strict_types=1);
  * validar a LÓGICA do AsORM sem depender de um servidor PostgreSQL
  * disponível no ambiente de execução. A implementação final e os testes
  * de desempenho do TCC devem ser feitos contra PostgreSQL de verdade,
- * conforme especificado na Seção 3.3 e 5.1.1.
+ * conforme especificado na Seção 3.3 e 3.8.
  */
 
 require __DIR__ . '/../src/Connection.php';

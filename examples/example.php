@@ -26,7 +26,7 @@ class Product extends ActiveRecord
 Connection::configure(
     dsn: 'pgsql:host=localhost;port=5432;dbname=tcc_orm',
     username: 'postgres',
-    password: '1424'
+    password: 'secret'
 );
 
 // -----------------------------------------------------------------
