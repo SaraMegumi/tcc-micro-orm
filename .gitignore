@@ -1,3 +1,4 @@
-/vendor/
+/vendor/*
+!/vendor/autoload.php
 .DS_Store
 benchmark/vendor/
